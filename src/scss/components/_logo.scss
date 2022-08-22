@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.logo {
+  width: fit-content;
+  z-index: 1000;
+  &__img {
+    max-width: 150px;
+    height: auto;
+    @include breakpoint(small) {
+      max-width: 165px;
+  }
+    @include breakpoint(medium) {
+      max-width: 175px;
+  }
+  @include breakpoint(large) {
+    max-width: 192px;
+}
+  }
+}

@@ -1,0 +1,90 @@
+@use "../abstracts" as *;
+
+.nav {
+  max-height: 4.5rem;
+  display: grid;
+
+  @include breakpoint(large) {
+    background: linear-gradient(90deg, #ffffff 50%, #F94F4F 50%);
+  }
+
+  &__container {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__links {
+    color: $color-white;
+  }
+
+  &__menu {
+    padding: 2rem 0;
+    width: 252px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    text-transform: uppercase;
+    transition: right $transition-primary, background $transition-primary;
+    gap: 2rem;
+
+    @media screen and (max-height: 32em) {
+      gap: 1rem;
+      padding-top: 1.5rem;
+    }
+
+    @include breakpoint(large) {
+      text-transform: initial;
+      transition: background 0s;
+      display: flex;
+      flex-direction: row;
+      justify-self: end;
+      width: initial;
+      padding: initial;
+      position: initial;
+      justify-content: end;
+    }
+
+    &.active {
+      background-color: #000;
+      right: 0;
+
+      @include breakpoint(large) {
+        height: initial;
+        background-color: initial;
+      }
+    }
+
+    li {
+      width: fit-content;
+      font-family: $ff-primary;
+      font-size: 1rem;
+    }
+  }
+
+  &__btn {
+    max-width: 199px;
+    background: $color-red;
+    justify-self: end;
+    color: $color-black;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1.4rem 1.7rem;
+
+    @include breakpoint(medium) {
+      margin: 0;
+    }
+
+    @include breakpoint(large) {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+//COLORS
+$color-red: #F94F4F; 
+$color-black: #000000;
+$color-bg-black: #191921; 
+$color-white: #FFFFFF;
+
+
+//TYPOGRAPHY
+$fs-primary: 18px;
+$ff-primary: 'Commissioner', sans-serif;
+$fw-primary: 400;
+$fw-secondary: 800;
+
+//TRANSITIONS
+
+$transition-primary: 0.4s ease-in-out;
+
+//BREAKPOINTS
+
+$breakpoints: (
+    xsmall: 22em,
+    small: 36em,
+    medium: 48em,
+    large: 62em,
+    xlarge: 75em,
+    xxlarge: 93em,
+)

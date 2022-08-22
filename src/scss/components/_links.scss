@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+a {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-white;
+  transition: color $transition-primary;
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline-offset: 0.3625rem;
+    outline: 0.15rem dotted $color-black;
+  }
+}
