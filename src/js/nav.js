@@ -1,9 +1,10 @@
 /* eslint-disable require-jsdoc */
-
+const navItems = document.querySelectorAll('.nav__item');
 const navMenu = document.querySelector('.nav__menu');
 const hamburger = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 const mql = window.matchMedia('(max-width: 62em)');
+elementsFadeInLeft = document.querySelectorAll('.fade-in-left');
 
 
 hamburger.addEventListener('click', () => {
@@ -13,6 +14,9 @@ hamburger.addEventListener('click', () => {
     body.classList.toggle('overflow-hidden');
     setHamburgerMenuState();
     addAriaHiddenAttr(mql);
+    setTimeout(() => {
+      handleIntersect();
+    }, 1000);
   }, 100);
 });
 
@@ -45,6 +49,29 @@ function addAriaHiddenAttr(event) {
   }
 }
 
-
 mql.addListener(addAriaHiddenAttr);
 addAriaHiddenAttr(mql);
+
+
+  function handleIntersect() {
+    const navMenu = document.querySelector('.nav__menu');
+    const navItems = document.querySelectorAll('.nav__item');
+    navItems.forEach((item, index) => {
+      if (navMenu.classList.contains('active')) {
+        setTimeout(() => {
+          item.classList.add('reveal');
+          return;
+        }, index * 150);
+      } else if (!navMenu.classList.contains('active')) {
+        for (const item of navItems) {
+          item.classList.remove('reveal');
+        }
+      }
+      /* else {
+        entry.target.classList.remove('reveal'); // Activate to make the animation active on scroll-up as well
+      }*/
+    });
+  }
+
+
+

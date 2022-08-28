@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   @include breakpoint(large) {
-    width: clamp(16rem, 70vw, 80rem);
+    width: clamp(16rem, 85vw, 90rem);
   }
 }
 

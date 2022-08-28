@@ -13,30 +13,54 @@
     }
   }
   &__menu {
-    transform: translateX((calc(100vw)));
+    z-index: 100;
+    background: $color-white;
     color: $color-red;
     font-family: $ff-secondary;
-    font-size: calc(3rem + 2vw);
+    font-size: calc(2.2rem + 2vw);
     font-weight: 700;
     height: 100vh;
     width: 100%;
     position: fixed;
+    transform: translateY(-100%);
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    opacity: 0.7;
     transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
     @media screen and (max-height: 32em) {
       font-size: calc(1.8rem + 2vw);
       gap: 1rem;
     }
+    @include breakpoint(small) {
+      font-size: calc(3rem + 2vw);
+    }
+    @include breakpoint(large) {
+      background: none;
+      position: initial;
+      transform: none;
+      opacity: 1;
+      flex-direction: row;
+      height: fit-content;
+      font-size: 1.3rem;
+      align-self: center;
+      transition: none;
+      font-weight: 500;
+      width: fit-content;
+      justify-self: flex-end;
+      gap: 1rem;
+    }
   }
-  &__item {
+  li {
     position: relative;
-    transition: color $transition-primary;
+    @include breakpoint(large) {
+      transform: none;
+      transition: none;
+      opacity: 1;
+      padding: 0.7rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -45,7 +69,7 @@
       background: $color-red;
       left: 0;
       top: 0;
-      transition: width $transition-primary;
+      transition: width 0.7s ease-in-out;
     }
     &:hover::before {
       width: 100%;

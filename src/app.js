@@ -5,3 +5,4 @@ import './js/index.js';
 
 import './img/favicon-32x32.png';
 import './img/desktop/logo.svg';
+import './img/mobile/image-hero.jpg';

@@ -3,53 +3,59 @@
 //HAMBURGER MENU
 
 .hamburger {
-  height: fit-content;
-  align-self: center;
-  position: relative;
+  border: none;
   background: none;
-  border: 0;
-  cursor: pointer;
-  justify-self: flex-end;
-  z-index: 1000;
+  justify-self: end;
+  align-self: center;
+  width: 30px;
+  height: 26px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.3rem;
-  transition: transform 0.5s ease-in-out;
-
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+  z-index: 1000;
+  @include breakpoint(medium) {
+    width: 36px;
+    height: 31px;
+  }
+  @include breakpoint(large) {
+    display: none;
+  }
   &:focus-visible {
     outline-offset: .4625rem;
     outline: 0.25rem dotted $color-black;
-  }
-  &:hover {
-    transform: scale(1.05);
   }
   &:hover &__bar {
     background: $color-red;
   }
   &__bar {
     background: $color-black;
-    display: block;
-    width: 2rem;
-    height: 0.25rem;
-    transition: transform 0.6s cubic-bezier(0.175, 0.65, 0.72, 1.675),
-      background $transition-primary;
-    border-radius: 0.325rem;
-    @include breakpoint(large) {
-      width: 2.75rem;
-      height: 0.25rem;
-    }
+    width: 100%;
+    height: 4px;
+    transition: transform 0.6s cubic-bezier(0.175, 0.65, 0.72, 1.675);
+    border-radius: .4625rem;
+  }
+  &__bar:nth-child(2) {
+    width: 50%;
+    transform-origin: right;
+    transition: transform .33s cubic-bezier(.54,-.81,.57,.57);
+  }
+  &__bar:nth-child(4) {
+    width: 50%;
+    align-self: flex-end;
+    transform-origin: left;
+  }
+  &.active {
+    transform: rotate(-45deg);
   }
   &.active &__bar:nth-child(2) {
-    transform: translateY(0.8rem) rotate(-45deg);
+    transform: rotate(-90deg) translateX(4px);
   }
 
-  &.active &__bar:nth-child(3) {
-    transform: translateX(20%);
-    opacity: 0;
-  }
+
 
   &.active &__bar:nth-child(4) {
-    transform: translateY(-0.8rem) rotate(45deg);
+    transform: rotate(-90deg) translateX(-4px);
   }
 }
