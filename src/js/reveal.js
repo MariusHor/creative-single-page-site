@@ -7,6 +7,7 @@ let elementsFadeUp;
 
 window.addEventListener('load', (event) => {
   elementsFadeUp = document.querySelectorAll('.fade-up');
+  elementsFadeInLeft = document.querySelectorAll('.fade-in-left');
 
   createObserver();
 }, false);
@@ -38,6 +39,9 @@ function createObserver() {
   }
   elementsFadeUp.forEach((elementFadeUp) => {
     observer.observe(elementFadeUp);
+  });
+  elementsFadeInLeft.forEach((elementFadeInLeft) => {
+    observer.observe(elementFadeInLeft);
   });
 }
 
