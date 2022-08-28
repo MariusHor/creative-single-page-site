@@ -22,7 +22,7 @@
     height: 100vh;
     width: 100%;
     position: fixed;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     left: 0;
     display: flex;
     flex-direction: column;
@@ -30,8 +30,8 @@
     align-items: center;
     gap: 2rem;
     transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
-    @media screen and (max-height: 32em) {
-      font-size: calc(1.8rem + 2vw);
+    @media screen and (max-height: 30em) {
+      font-size: calc(1.8rem + 2vw)!important;
       gap: 1rem;
     }
     @include breakpoint(small) {
@@ -44,7 +44,7 @@
       opacity: 1;
       flex-direction: row;
       height: fit-content;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       align-self: center;
       transition: none;
       font-weight: 500;
