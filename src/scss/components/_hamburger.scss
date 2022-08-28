@@ -3,64 +3,53 @@
 //HAMBURGER MENU
 
 .hamburger {
+  position: relative;
+  background: none;
+  border: 0;
   cursor: pointer;
-  justify-self: end;
+  justify-self: flex-end;
   z-index: 1000;
-  @include breakpoint(large) {
-    display: none;
-  }
-  &__hamburger:hover {
-    transition: all 0.3s ease-in-out;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  transition: transform 0.5s ease-in-out;
 
   &:focus,
-  &:focus-visible,
+  &:focus-within,
   &:active {
-    outline-offset: 0.3625rem;
-    outline: 0.15rem dotted $color-black;
+    outline-offset: .4625rem;
+    outline: 0.25rem dotted $color-black;
   }
-
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:hover &__bar {
+    background: $color-red;
+  }
   &__bar {
+    background: $color-black;
     display: block;
-    width: 30px;
-    height: 3.5px;
-    margin: 7px auto;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.72, 1.675);
-    border-radius: 5px;
+    width: 2rem;
+    height: 0.25rem;
+    transition: transform 0.6s cubic-bezier(0.175, 0.65, 0.72, 1.675),
+      background $transition-primary;
+    border-radius: 0.325rem;
     @include breakpoint(large) {
-      width: 35px;
-      height: 4px;
+      width: 2.75rem;
+      height: 0.25rem;
+    }
   }
+  &.active &__bar:nth-child(2) {
+    transform: translateY(0.8rem) rotate(-45deg);
   }
 
-  &__bar {
-    background-color: #979797;
+  &.active &__bar:nth-child(3) {
+    transform: translateX(20%);
+    opacity: 0;
   }
 
-}
-
-//BARS TRANSITION
-
-.hamburger.active .hamburger__bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .hamburger__bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .hamburger__bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  &.active &__bar:nth-child(4) {
+    transform: translateY(-0.8rem) rotate(45deg);
+  }
 }

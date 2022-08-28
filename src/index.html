@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-</head>
+  <link rel="stylesheet" href="https://use.typekit.net/fky7bzs.css">
 <body>
   <!--HEADER-->
   <header class="header">
@@ -18,16 +18,17 @@
           <a href="#" class="logo">
             <img src="./img/desktop/logo.svg" alt="website logo linking to our home page" width="161" height="30" class="logo__img"></img>
           </a>
-          <div class="hamburger">
+          <button class="hamburger" aria-labelledby="hamburger">
+            <span id="hamburger" hidden>Main menu</span>
             <span class="hamburger__bar"></span>
             <span class="hamburger__bar"></span>
             <span class="hamburger__bar"></span>
-          </div>
+          </button>
           <ul class="nav__links nav__menu">
-            <li class="nav__item"><a href="#">About</a></li>
-            <li class="nav__item" ><a href="#">Service</a></li>
-            <li class="nav__item"><a href="#">Projects</a></li>
-            <li class="nav__item nav__btn"><a href="#">Schedule a Call</a></li>
+            <li class="nav__item fade-in-left"><a href="#">About</a></li>
+            <li class="nav__item fade-in-left" ><a href="#">Service</a></li>
+            <li class="nav__item fade-in-left"><a href="#">Projects</a></li>
+            <li class="nav__item fade-in-left"><a href="#">Contact</a></li>
           </ul>
         </div>
     </nav>

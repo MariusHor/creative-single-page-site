@@ -4,13 +4,13 @@ a {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: $color-white;
+  color: inherit;
   transition: color $transition-primary;
 
   &:focus,
   &:focus-visible,
   &:active {
-    outline-offset: 0.3625rem;
-    outline: 0.15rem dotted $color-black;
+    outline-offset: .4625rem;
+    outline: 0.25rem dotted $color-black;
   }
 }

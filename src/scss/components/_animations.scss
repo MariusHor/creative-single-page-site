@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.fade-up {
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.fade-in-left {
+  transform: translate3d(42px, 0, 0);
+  opacity: 0.5;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.72, 1.675),
+    opacity 1s ease-in-out;
+}
+
+.reveal {
+  transform: translate(0);
+  opacity: 1;
+}

@@ -2,7 +2,7 @@
 
 body {
     font-family: $ff-primary;
-    font-size: $fs-primary;
+    font-size: calc(15px + 0.390625vw);
     min-width: fit-content;
 }
 
