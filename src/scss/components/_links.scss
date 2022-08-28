@@ -7,9 +7,7 @@ a {
   color: inherit;
   transition: color $transition-primary;
 
-  &:focus,
-  &:focus-visible,
-  &:active {
+  &:focus-visible {
     outline-offset: .4625rem;
     outline: 0.25rem dotted $color-black;
   }

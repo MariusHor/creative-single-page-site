@@ -1,9 +1,7 @@
 @use "../abstracts" as *;
 
 body {
-    font-family: $ff-primary;
-    font-size: calc(15px + 0.390625vw);
-    min-width: fit-content;
+  font-family: $ff-primary;
+  font-size: calc(15px + 0.390625vw);
+  min-width: fit-content;
 }
-
-
