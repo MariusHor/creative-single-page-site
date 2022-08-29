@@ -34,7 +34,7 @@
         width: fit-content;
         color: white;
         font-weight: 700;
-        padding: 1rem 2rem;
+        padding: 0.7rem 1.6rem;
         &::before {
             position: absolute;
             top: 0;
@@ -45,7 +45,7 @@
             background: $color-red;
             left: -10%;
             transform: skew(30deg);
-            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+            transition: transform 0.7s cubic-bezier(0.3, 1, 0.8, 1);
         }
         &:hover::before {
             transform: translate3d(100%,0,0);

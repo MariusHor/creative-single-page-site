@@ -17,7 +17,7 @@ hamburger.addEventListener('click', () => {
     setTimeout(() => {
       handleIntersect();
     }, 1000);
-  }, 100);
+  }, 400);
 });
 
 
@@ -61,15 +61,12 @@ addAriaHiddenAttr(mql);
         setTimeout(() => {
           item.classList.add('reveal');
           return;
-        }, index * 150);
+        }, index * 250);
       } else if (!navMenu.classList.contains('active')) {
         for (const item of navItems) {
           item.classList.remove('reveal');
         }
       }
-      /* else {
-        entry.target.classList.remove('reveal'); // Activate to make the animation active on scroll-up as well
-      }*/
     });
   }
 

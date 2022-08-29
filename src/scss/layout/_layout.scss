@@ -3,17 +3,17 @@
 //CONTAINERS
 
 .s-container {
-  width: clamp(16rem, 80vw, 80rem);
+  width: clamp(16rem, 85vw, 80rem);
   margin-left: auto;
   margin-right: auto;
   @include breakpoint(large) {
-    width: clamp(16rem, 85vw, 90rem);
+    width: clamp(16rem, 90vw, 95rem);
   }
 }
 
 .header {
   display: grid;
-  grid-template-rows: 0.5fr 2fr;
+  grid-template-rows: 0.5fr 3fr;
   min-height: 100vh;
 }
 
@@ -22,6 +22,6 @@
 }
 
 .active {
-  transform: translateY(0%);
+  transform: translateX(0%);
   opacity: 1 !important;
 }

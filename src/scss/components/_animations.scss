@@ -10,7 +10,7 @@
   transform: translate3d(42px, 0, 0);
   opacity: 0;
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.72, 1.675),
-    opacity 0.5s ease-in-out, color $transition-primary;
+    opacity 0.5s ease-in-out, color $transition-primary, ;
 }
 
 .reveal {
