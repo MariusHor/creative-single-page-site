@@ -29,26 +29,24 @@
         border: solid 1px $color-red;
         overflow: hidden;
         position: relative;
-        margin-top: 2rem;
-        background: rgba(0,0,0,.1);
+        margin-top: 3rem;
         width: fit-content;
         color: white;
-        font-weight: 700;
-        padding: 0.7rem 1.6rem;
+        padding: 0.7rem 1.5rem;
+        background: rgba(0,0,0,.1);
         &::before {
             position: absolute;
             top: 0;
             left: 0;
             height: 100%;
-            width: 120%;
+            width: 100%;
             content: '';
             background: $color-red;
-            left: -10%;
-            transform: skew(30deg);
-            transition: transform 0.7s cubic-bezier(0.3, 1, 0.8, 1);
+            transform: translate3d(-90%,0,0);
+            transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
         }
         &:hover::before {
-            transform: translate3d(100%,0,0);
+            transform: translate3d(90%,0,0);
         }
         &:hover {
             border: solid 1px $color-red;
@@ -59,9 +57,12 @@
         }
     }
     &__title {
-        font-size: clamp(2rem, 5vw, 4rem);
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        font-weight: 500;
+        line-height: 1.1;
     }
     &__text {
-        font-size: clamp(1rem, 3vw, 1.5rem);
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: rgb(221, 221, 221);
     }
 }
