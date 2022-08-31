@@ -25,3 +25,18 @@
   transform: translateX(0%);
   opacity: 1 !important;
 }
+
+.section__top {
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  position: relative;
+  &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -2.25rem;
+      width: 1.5rem;
+      height: 0.0625rem;
+      background: black;
+      transform: translateY(-50%);
+  }
+}

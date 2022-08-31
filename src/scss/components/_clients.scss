@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+.clients {
+    background: black;
+    min-height: 100vh;
+    padding: 3rem 0;
+    .section__top {
+        color: white;
+        &::before {
+            background: white;
+        }
+    }
+    &__wrapper {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        justify-items: center;
+        align-items: center;
+    }
+    &__item {
+        max-width: 6rem;
+        position: relative;
+        img{
+            transition: filter ease-in-out 0.5s;
+            filter: brightness( 500% ) contrast( 1% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
+        }
+    }
+    &__item:hover img {
+        filter: none;
+    }
+    &__item-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        mix-blend-mode: multiply;
+        height: 100%;
+        width: 100%;
+    }
+}

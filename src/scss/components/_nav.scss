@@ -18,7 +18,6 @@
     z-index: 100;
     background: $color-white;
     font-family: $ff-primary;
-    font-size: calc(2rem + 2vw);
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -28,12 +27,6 @@
     justify-content: center;
     align-items: center;
     transition: opacity 0.4s ease-in-out;
-    @media screen and (max-height: 30em) and (max-width: 62em) {
-      font-size: calc(0.8rem + 2vw)!important;
-    }
-    @include breakpoint(small) {
-      font-size: calc(2.5rem + 2vw);
-    }
     @include breakpoint(large) {
       background: none;
       position: initial;
@@ -41,31 +34,38 @@
       opacity: 1;
       flex-direction: row;
       height: fit-content;
-      font-size: 1.1rem;
       align-self: center;
       transition: none;
-      font-weight: 500;
       width: fit-content;
       justify-self: flex-end;
     }
   }
   &__links {
+    font-size: calc(2rem + 1vw);
     text-align: center;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     position: relative;
     color: white;
-    gap: 0.5rem;
+    gap: 0.7rem;
+    @media screen and (max-height: 30em) and (max-width: 62em) {
+      font-size: calc(0.8rem + 2vw) !important;
+    }
+    @include breakpoint(small) {
+      font-size: calc(2.5rem + 1vw);
+    }
     @include breakpoint(large) {
       transform: none;
       transition: none;
       color: black;
       flex-direction: row;
-      gap: 1rem;
+      gap: 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 500;
     }
     li {
-      padding: 0.4rem;
+      padding: 0.4rem 0;
       color: black;
       @media screen and (max-height: 30em) and (max-width: 62em) {
         padding: 0.2rem;
@@ -74,35 +74,42 @@
     li::before {
       content: "";
       opacity: 0;
-      transform: rotate(5deg);
+      transform: rotate(-5deg);
       position: absolute;
-      height: 100%;
+      height: 7%;
       width: 100%;
       background: $color-red;
       left: 0;
       bottom: 0;
       transition: opacity 0.5s ease-in-out;
+      @include breakpoint(large) {
+        height: 10%;
+      }
+    }
+    
+    li:nth-child(odd)::before {
+      transform: rotate(5deg);
     }
 
     li:hover::before {
       opacity: 1;
     }
-    li:hover {
-      color: white;
-    }
   }
   .socials {
     margin-bottom: 1rem;
     display: flex;
-    gap: 1rem;
-    font-size: 2rem;
+    gap: 1.5rem;
+    font-size: 1.7rem;
     justify-self: center;
-    align-self: flex-end;
+    align-self: center;
     @media screen and (max-height: 30em) and (max-width: 62em) {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
     @include breakpoint(large) {
       display: none;
+    }
+    li:hover {
+      color: $color-red;
     }
   }
 }

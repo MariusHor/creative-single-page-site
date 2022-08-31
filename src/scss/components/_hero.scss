@@ -11,8 +11,10 @@
     background-size: cover;
     @include breakpoint(large) {
         background-image:  url(/src/img/girl.webp); /* fallback */
-        background: linear-gradient(250deg,rgba(0,0,0,.1),rgba(0,0,0,.8)), url(/src/img/girl.webp);
+        background: linear-gradient(250deg,rgba(0,0,0,.1),rgba(0,0,0,.8)), url(/src/img/getty.jpg);
+        background-size: cover;
         background-position-x: 30%;
+        background-position-y: 50%;
         background-repeat: no-repeat;
       }
     &__content {
@@ -43,7 +45,7 @@
             content: '';
             background: $color-red;
             transform: translate3d(-90%,0,0);
-            transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
+            transition: transform 1s cubic-bezier(0.3, 1, 0.8, 1);
         }
         &:hover::before {
             transform: translate3d(90%,0,0);

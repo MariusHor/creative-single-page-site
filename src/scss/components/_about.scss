@@ -2,67 +2,70 @@
 
 .about {
     min-height: 100vh;
-    background-color:  #ffacac;
     display: grid;
     align-items: center;
     justify-content: center;
+    @media screen and (max-height: 30em) and (max-width: 62em) {
+        min-height: initial;
+        gap: 3rem;
+        padding: 2rem 0;
+    }
     &__title {
         color: rgb(26, 26, 26);
         font-weight: 500;
         font-family: $ff-secondary;
         line-height: 1.2;
         font-size: clamp(1.5rem, 5vw, 3rem);
+        text-align: center;
+        @media screen and (max-height: 30em) and (max-width: 62em) {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+        }
+    }
+    &__img-wrapper {
+        max-width: 60rem;
+        overflow: hidden;
+        border-radius: 0.7rem;
+        justify-self: center;
+    }
+    &__img {
+        transition: transform 0.7s cubic-bezier(0.3, 1, 0.8, 1);
+    }
+    &__img:hover {
+        transform: scale(1.025);
     }
     &__btn {
         align-self: baseline;
         justify-self: center;
         letter-spacing: 0.1rem;
-        border: solid 1px black;
-        overflow: hidden;
         position: relative;
         margin-top: 3rem;
-        background: rgba(255, 0, 0, 0.1);
         width: fit-content;
-        color: white;
         padding: 0.7rem 1.5rem;
+        @media screen and (max-height: 30em) and (max-width: 62em) {
+            margin: 0;
+        }
         &::before {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 10%;
             height: 100%;
-            width: 120%;
+            width: 27%;
             content: '';
-            background: rgba(0, 0, 0, 0.9);
-            left: -10%;
-            transform: skew(30deg);
-            transition: transform 0.7s cubic-bezier(0.3, 1, 0.8, 1);
+            background: $color-red;
+            border-radius: 50%;
+            transition: transform 0.9s cubic-bezier(0.3, 1, 0.8, 1);
         }
         &:hover::before {
-            transform: translate3d(100%,0,0);
-        }
-        &:hover span {
-            color: black;
+            transform: translate3d(200%,0,0);
         }
         &:hover {
-            border: solid 1px black;
         }
         span {
             position: relative;
             mix-blend-mode: hard-light;
         }
-    }
-    &__top {
-        font-size: clamp(1rem, 5vw, 1.2rem);
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: -2.25rem;
-            width: 1.5rem;
-            height: 0.0625rem;
-            background: black;
-            transform: translateY(-50%);
+        &:hover span {
+            color: black;
         }
     }
 }
