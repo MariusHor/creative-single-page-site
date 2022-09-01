@@ -3,38 +3,53 @@
 .clients {
     background: black;
     min-height: 100vh;
-    padding: 3rem 0;
+    display: grid;
+    @media screen and (max-height: 30em) and (max-width: 62em) {
+        min-height: initial;
+    }
+    .s-container {
+        display: grid;
+        grid-template-rows: 1fr 4fr;
+    }
     .section__top {
+        align-self: center;
         color: white;
         &::before {
             background: white;
         }
     }
     &__wrapper {
-        margin-top: 4rem;
+        align-self: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        gap: 2rem;
         justify-items: center;
         align-items: center;
+        padding-bottom: 1rem;
+        @include breakpoint(medium) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include breakpoint(large) {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
     &__item {
-        max-width: 6rem;
+        max-width: calc(5rem + 7vw);;
         position: relative;
         img{
             transition: filter ease-in-out 0.5s;
             filter: brightness( 500% ) contrast( 1% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
         }
+        &:nth-child(16) {
+            @include breakpoint(medium) {
+                grid-column: 2;
+            }
+            @include breakpoint(large) {
+                grid-column: initial;
+            }
+        }
     }
     &__item:hover img {
         filter: none;
-    }
-    &__item-overlay {
-        position: absolute;
-        left: 0;
-        top: 0;
-        mix-blend-mode: multiply;
-        height: 100%;
-        width: 100%;
     }
 }

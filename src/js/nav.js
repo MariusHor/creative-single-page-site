@@ -70,5 +70,15 @@ addAriaHiddenAttr(mql);
     });
   }
 
+  function removeNavItemClass(event) {
+    const navItems = document.querySelectorAll('.nav__item');
+    navItems.forEach((item) => {
+      if (!event.matches) {
+          item.classList.remove('fade-in-left');
+      } else item.classList.add('fade-in-left');
+    });
+  }
 
+  mql.addListener(removeNavItemClass);
+  removeNavItemClass(mql);
 
