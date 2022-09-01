@@ -29,3 +29,7 @@ import './img/research.jpg';
 import './img/creative.jpg';
 import './img/branding.jpg';
 import './img/strategy.jpg';
+import './img/design.png';
+import './img/social.png';
+import './img/designlogo.png';
+import './img/web.png';

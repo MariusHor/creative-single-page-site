@@ -48,15 +48,15 @@
             position: absolute;
             top: 0;
             left: 10%;
-            height: 100%;
-            width: 27%;
+            height: 50px;
+            width: 50px;
             content: '';
             background: $color-red;
             border-radius: 50%;
             transition: transform 0.9s cubic-bezier(0.3, 1, 0.8, 1);
         }
         &:hover::before {
-            transform: translate3d(200%,0,0);
+            transform: scale(1.2)
         }
         span {
             position: relative;

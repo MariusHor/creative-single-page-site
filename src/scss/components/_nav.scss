@@ -29,7 +29,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
     @include breakpoint(large) {
       background: none;
       position: initial;
