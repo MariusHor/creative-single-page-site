@@ -3,18 +3,13 @@
 .services {
     display: grid;
     align-items: center;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     &__wrapper {
         display: flex;
         flex-direction: column;
-        margin: 3rem 0;
-    }
-    &__content{
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        order: 2;
         text-align: center;
+        margin: 3rem 0;
     }
     &__cards {
         display: grid;
@@ -33,11 +28,6 @@
         gap: 1rem;
         padding: 1.5rem;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        &:nth-child(3) {
-            @include breakpoint(medium) {
-                transform: translateX(50%);
-            }
-        }
     }
     &__card-img {
         max-width: 5rem;

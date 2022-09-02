@@ -33,3 +33,7 @@ import './img/design.png';
 import './img/social.png';
 import './img/designlogo.png';
 import './img/web.png';
+import './img/branding.png';
+import './img/hotel.jpg';
+import './img/mini.jpg';
+import './img/more.jpg';

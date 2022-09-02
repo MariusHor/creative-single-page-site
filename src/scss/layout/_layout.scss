@@ -21,11 +21,6 @@
   overflow: hidden;
 }
 
-.active {
-  transform: translateX(0%);
-  opacity: 1 !important;
-}
-
 .section__top {
   font-size: clamp(1rem, 5vw, 1.2rem);
   position: relative;

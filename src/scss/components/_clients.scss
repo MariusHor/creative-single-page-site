@@ -4,6 +4,7 @@
     background: black;
     min-height: 100vh;
     display: grid;
+    padding-bottom: 3rem;
     @media screen and (max-height: 30em) and (max-width: 62em) {
         min-height: initial;
     }
@@ -25,7 +26,6 @@
         gap: 2rem;
         justify-items: center;
         align-items: center;
-        padding-bottom: 1rem;
         @include breakpoint(medium) {
             grid-template-columns: repeat(3, 1fr);
         }

@@ -15,7 +15,7 @@
         font-weight: 500;
         font-family: $ff-secondary;
         line-height: 1.2;
-        font-size: clamp(1.5rem, 5vw, 3rem);
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
         text-align: center;
         @media screen and (max-height: 30em) and (max-width: 62em) {
             font-size: clamp(1.5rem, 5vw, 2rem);

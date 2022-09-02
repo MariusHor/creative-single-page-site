@@ -16,7 +16,6 @@
     }
   }
   &__menu {
-    transform: translateX(-100%);
     opacity: 0;
     z-index: 100;
     background: $color-white;
@@ -24,12 +23,16 @@
     height: 100vh;
     width: 100%;
     position: fixed;
-    left: 0;
+    left: -100%;
     top: 0;
     display: grid;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, left 0.4s ease-in-out;
+    &.active {
+        left: 0;
+        opacity: 1 !important;
+    }
     @include breakpoint(large) {
       background: none;
       position: initial;
