@@ -7,7 +7,7 @@
   <title>Frontend Mentor | Creative single page site</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;400;800&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fky7bzs.css">
   <script
   src="https://kit.fontawesome.com/d73036c961.js"
@@ -18,7 +18,7 @@
   <header class="header">
       <!--NAV-->
     <nav class="nav">
-        <div class="s-container nav__container">
+        <div class="m-container nav__container">
           <a href="#" class="logo">
             <img src="./img/desktop/logo.svg" alt="website logo linking to our home page" width="161" height="30" class="logo__img"></img>
           </a>
@@ -209,9 +209,56 @@
     </div>
   </main>
   <!--FOOTER-->
-  <footer class="footer">
-    <div class="s-container footer__container">
-      
+  <footer class="footer s-container">
+
+    <div class="footer__top">
+      <div class="footer__top-left">
+        <h2 class="footer__top-title">Got a project?</h2>
+        <p class="footer__top-subtitle">Let's talk</p>
+        <div class="footer__top-cta">
+          <i class="fa-solid fa-angle-right"></i>
+          <a href="#">Tell us everything</a>
+        </div>
+      </div>
+      <div class="footer__top-right">
+        <ul class="footer__nav">
+          <li><a href="#">Works</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="footer__nav">
+          <li><a href="#">Lugano</a></li>
+          <li><a href="#">Berlin</a></li>
+          <li><a href="#">Oslo</a></li>
+        </ul>
+        <ul class="footer__nav">
+          <li><a href="#">Creative.news</a></li>
+          <li><a href="#">Creative.blog</a></li>
+          <li><a href="#">Creative.events</a></li>
+          <li><a href="#">Creative.store</a></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="#" class="logo">
+        <img src="./img/desktop/logo.svg" alt="website logo linking to our home page" width="161" height="30" class="logo__img"></img>
+      </a>
+      <ul class="socials">
+        <li class="socials__icon">
+          <a href="#" aria-labelledby="ig-vh"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <span hidden id="ig-vh">Go to our Instagram page</span>
+        </li>
+        <li class="socials__icon">
+          <a href="#" aria-labelledby="fb-vh"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i></a>
+          <span hidden id="fb-vh">Go to our Facebook page</span>
+        </li>
+        <li class="socials__icon">
+          <a href="#" aria-labelledby="tw-vh"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          <span hidden id="tw-vh">Go tur Twitter page</span>
+        </li>
+      </ul>
     </div>
   </footer>
 
