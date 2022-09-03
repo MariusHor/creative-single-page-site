@@ -35,3 +35,26 @@
       transform: translateY(-50%);
   }
 }
+
+.fixed-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-red;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  font-size: 2.3rem;
+  color: white;
+  i {
+    transition: transform 0.5s ease-in-out;
+  }
+  i:hover {
+    transform: scale(1.1);
+  }
+}
+

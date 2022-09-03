@@ -13,17 +13,16 @@
         gap: 1rem;
         min-height: 70rem;
         justify-content: center;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
     }
     &__card {
         position: relative;
         font-size: 14px;
         flex: 1;
-        max-width: 30rem;
         max-height: 20rem;
         padding: 1rem;
-        @include breakpoint(large) {
-            max-width: 50rem;
-        }
         &-title {
             font-size: 22px;
             font-weight: 700;
@@ -35,7 +34,7 @@
         &:nth-child(1) {
             background: url(/src/img/mini.jpg);
             background-size: cover;
-            @include breakpoint(large) {
+            @include breakpoint(medium) {
                 background-position: -50px;
             }
         }

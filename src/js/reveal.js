@@ -49,3 +49,11 @@ function createObserver() {
   });
 }
 
+
+const scrollBtn = document.querySelector('.scroll-btn');
+const aboutSection = document.querySelector('.about') 
+
+scrollBtn.addEventListener('click', () => {
+    aboutSection.scrollIntoView()
+})
+

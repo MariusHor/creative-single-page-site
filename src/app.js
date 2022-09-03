@@ -6,6 +6,8 @@ import './js/index.js';
 import './img/favicon-32x32.png';
 import './img/desktop/logo.svg';
 import './img/girl.webp';
+import './img/girldesktop.webp';
+import './img/girlmobile.webp';
 import './img/girl640w.webp';
 import './img/getty.jpg';
 import './img/office.jpg';
