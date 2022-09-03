@@ -3,7 +3,7 @@
 
 .hero {
     display: grid;
-    grid-template-rows: 8fr 1fr;
+    grid-template-rows: 6fr 1fr;
     align-items: center;
     background: #000000;
     background-image:  url(/src/img/girl640w.webp); /* fallback */
@@ -17,6 +17,9 @@
         background-size: cover;
         background-position-y: 20%;
         background-repeat: no-repeat;
+      }
+      @media screen and (max-height: 30em) and (max-width: 62em) {
+        grid-template-rows: 4fr 1fr;
       }
     &__content {
         display: flex;
@@ -77,6 +80,7 @@
         height: fit-content;
         color: white;
         justify-self: center;
+        align-self: flex-start;
         font-size: 2rem;
         animation: scroll 3s cubic-bezier(0.3, 1, 0.8, 1) infinite;
     }
