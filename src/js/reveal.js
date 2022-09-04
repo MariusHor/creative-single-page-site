@@ -1,9 +1,12 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 
-//  Reveal Animation
+//  Reveal Animation when element enters viewport
+
+
 let elementsFadeInLeft;
 let elementsFadeUp;
+let elementsFadeInRight;
 
 window.addEventListener('load', (event) => {
   elementsFadeUp = document.querySelectorAll('.fade-up');
@@ -48,12 +51,4 @@ function createObserver() {
     observer.observe(elementFadeInRight);
   });
 }
-
-
-const scrollBtn = document.querySelector('.scroll-btn');
-const aboutSection = document.querySelector('.about') 
-
-scrollBtn.addEventListener('click', () => {
-    aboutSection.scrollIntoView()
-})
 

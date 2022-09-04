@@ -1,55 +1,65 @@
 @use "../abstracts" as *;
 
 .clients {
-    background: black;
-    min-height: 100vh;
+  display: grid;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+  background: black;
+
+  @media screen and (max-height: 30em) and (max-width: 62em) {
+    min-height: initial;
+  }
+  .s-container {
     display: grid;
-    padding-bottom: 3rem;
-    @media screen and (max-height: 30em) and (max-width: 62em) {
-        min-height: initial;
+    grid-template-rows: 1fr 4fr;
+    @include breakpoint(large) {
+      grid-template-rows: 1fr 8fr;
     }
-    .s-container {
-        display: grid;
-        grid-template-rows: 1fr 4fr;
+  }
+  .section__top {
+    align-self: center;
+    color: white;
+    &::before {
+      background: white;
     }
-    .section__top {
-        align-self: center;
-        color: white;
-        &::before {
-            background: white;
-        }
+    @include breakpoint(large) {
+        margin-top: 2rem;
     }
-    &__wrapper {
-        align-self: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        justify-items: center;
-        align-items: center;
-        @include breakpoint(medium) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        @include breakpoint(large) {
-            grid-template-columns: repeat(4, 1fr);
-        }
+  }
+
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
     }
-    &__item {
-        max-width: calc(5rem + 7vw);;
-        position: relative;
-        img{
-            transition: filter ease-in-out 0.5s;
-            filter: brightness( 500% ) contrast( 1% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
-        }
-        &:nth-child(16) {
-            @include breakpoint(medium) {
-                grid-column: 2;
-            }
-            @include breakpoint(large) {
-                grid-column: initial;
-            }
-        }
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
     }
-    &__item:hover img {
-        filter: none;
+  }
+  &__item {
+    position: relative;
+    max-width: calc(5rem + 7vw);
+    img {
+      transition: filter ease-in-out 0.5s;
+      filter: brightness(500%) contrast(1%) saturate(0%) blur(0px)
+        hue-rotate(0deg);
     }
+    &:nth-child(16) {
+      @include breakpoint(medium) {
+        grid-column: 2;
+      }
+      @include breakpoint(large) {
+        grid-column: initial;
+      }
+    }
+  }
+  &__item:hover img {
+    filter: none;
+  }
 }

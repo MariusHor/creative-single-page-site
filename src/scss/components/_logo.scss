@@ -1,8 +1,8 @@
 @use "../abstracts" as *;
 
 .logo {
-  width: fit-content;
-  z-index: 1000;
   align-self: center;
   max-width: 125px;
+  width: fit-content;
+  z-index: 1000;
 }

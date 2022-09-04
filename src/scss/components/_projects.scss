@@ -1,35 +1,36 @@
 @use "../abstracts" as *;
 
 .projects {
+    padding: 3rem 0;
     background: black;
     color: white;
-    padding: 3rem 0;
     .s-container {
         display: grid;
     }
     &__cards {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 1rem;
         min-height: 70rem;
-        justify-content: center;
         max-width: 800px;
         width: 100%;
         margin: 0 auto;
     }
     &__card {
-        position: relative;
-        font-size: 14px;
         flex: 1;
+        position: relative;
         max-height: 20rem;
         padding: 1rem;
+        font-size: 14px;
+
         &-title {
-            font-size: 22px;
-            font-weight: 700;
             position: absolute;
             bottom: 0;
             left: 0;
             padding: inherit;
+            font-size: 22px;
+            font-weight: 700;
         }
         &:nth-child(1) {
             background: url(/src/img/mini.jpg);
@@ -51,10 +52,10 @@
         width: fit-content;
         margin: 0 auto;
         span {
-            background: white;
-            color: black;
             padding: 0.5rem;
             width: 100%;
+            background: white;
+            color: black;
         }
     }
     .section__top {

@@ -1,82 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-  <title>Frontend Mentor | Creative single page site</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel='icon' type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <title>Creative single page site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;400;800&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fky7bzs.css">
-  <script
-  src="https://kit.fontawesome.com/d73036c961.js"
-  crossorigin="anonymous"
-></script>
+  <script defer src="https://kit.fontawesome.com/d73036c961.js" crossorigin="anonymous"></script>
 <body>
   <!--HEADER-->
   <header class="header">
-      <!--NAV-->
-    <nav class="nav">
-        <div class="m-container nav__container">
-          <a href="#" class="logo">
-            <img src="./img/desktop/logo.svg" alt="website logo linking to our home page" width="161" height="30" class="logo__img"></img>
-          </a>
-          <button class="hamburger" aria-labelledby="hamburger">
-            <span id="hamburger" hidden>Main menu</span>
-            <span class="hamburger__bar"></span>
-            <span class="hamburger__bar"></span>
-            <span class="hamburger__bar"></span>
-          </button>
-          <div class="nav__menu">
-            <ul class="nav__links ">
-              <li class="nav__item fade-in-left"><a href="#">works</a></li>
-              <li class="nav__item fade-in-left" ><a href="#">about</a></li>
-              <li class="nav__item fade-in-left"><a href="#">solutions</a></li>
-              <li class="nav__item fade-in-left"><a href="#">contact</a></li>
-            </ul>
-            <ul class="socials">
-              <li class="socials__icon">
-                <a href="#" aria-labelledby="ig-vh"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                <span hidden id="ig-vh">Go to our Instagram page</span>
-              </li>
-              <li class="socials__icon">
-                <a href="#" aria-labelledby="fb-vh"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i></a>
-                <span hidden id="fb-vh">Go to our Facebook page</span>
-              </li>
-              <li class="socials__icon">
-                <a href="#" aria-labelledby="tw-vh"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
-                <span hidden id="tw-vh">Go tur Twitter page</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <!--NAV-->
+    <nav class="nav m-container">
+      <a href="#" class="logo">
+        <img src="./img/desktop/logo.svg" alt="website logo linking to our home page" width="161" height="30"
+          class="logo__img"></img>
+      </a>
+      <button class="hamburger" aria-labelledby="hamburger">
+        <span id="hamburger" hidden>Main menu</span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+      <div class="nav__menu">
+        <ul class="nav__links ">
+          <li class="nav__item fade-in-left"><a class="link--first" href="#">works</a></li>
+          <li class="nav__item fade-in-left"><a class="link--first" href="#">about</a></li>
+          <li class="nav__item fade-in-left"><a class="link--first" href="#">solutions</a></li>
+          <li class="nav__item fade-in-left"><a class="link--first" href="#">contact</a></li>
+        </ul>
+        <ul class="socials">
+          <li class="socials__icon">
+            <a href="#" aria-labelledby="ig-vh"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <span hidden id="ig-vh">Go to our Instagram page</span>
+          </li>
+          <li class="socials__icon">
+            <a href="#" aria-labelledby="fb-vh"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i></a>
+            <span hidden id="fb-vh">Go to our Facebook page</span>
+          </li>
+          <li class="socials__icon">
+            <a href="#" aria-labelledby="tw-vh"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+            <span hidden id="tw-vh">Go tur Twitter page</span>
+          </li>
+        </ul>
+      </div>
     </nav>
-      <!--HERO-->
+    <!--HERO-->
     <hero class="hero">
       <div class="hero__content s-container">
         <h1 class="hero__title fade-up">Brands that deliver.</h1>
         <p class="hero__text fade-up">Digital creativity is our focus.</p>
-        <a href="#" class="hero__btn"><span>See our work.</span></a>
+        <a href="#" class="hero__btn" aria-labelledby="hero-btn"><span id="hero-btn">See our work.</span></a>
       </div>
-      <button class="scroll-btn"><i class="fa-solid fa-arrow-down"></i></button>
+      <button class="scroll-btn" aria-labelledby="scroll-down">
+        <span id="scroll-down" hidden>Scroll to next section</span>
+        <i class="fa-solid fa-arrow-down"></i>
+      </button>
     </hero>
   </header>
-  <!--HEADER END-->
 
   <!--MAIN-->
   <main class="main">
-      <!--SHOWCASE-->
+    <!--ABOUT-->
     <section class="about s-container">
       <p class="section__top fade-in-left">
         About us
       </p>
-      <h2 class="about__title s-container fade-up">We work best with <strong>like minded</strong> businesses and brands. The ones that do everything they can to have a <strong>positive</strong> impact.</h2>
+      <h2 class="about__title s-container fade-up">We work best with <strong>like minded</strong> businesses and brands.
+        The ones that do everything they can to have a <strong>positive</strong> impact.</h2>
       <div class="about__img-wrapper">
-        <img src="/src/img/office.jpg" alt="" class="about__img">
+        <img src="/src/img/office.jpg" alt="An office that inspires productivity" class="about__img">
       </div>
-      <a href="#" class="about__btn fade-in-left"><span>Get to know us.</span></a>
+      <a href="#" class="about__btn fade-in-left" aria-labelledby="about-btn"><span id="about-btn">Get to know
+          us.</span></a>
     </section>
+    <!--PROJECTS-->
     <section class="projects">
       <div class="s-container">
         <p class="section__top fade-in-left">
@@ -108,142 +110,156 @@
             <p class="projects__card-title fade-in-left">More</p>
           </li>
         </ul>
-        <a href="#" class="about__btn fade-in-left"><span>See more.</span></a>
+        <a href="#" class="about__btn fade-in-left" aria-labelledby="see-more"><span id="see-more">See more.</span></a>
       </div>
     </section>
+    <!--SERVICES-->
     <section class="services s-container">
       <p class="section__top fade-in-left">
         Our Solutions
       </p>
       <div class="services__wrapper">
-          <ul class="services__cards">
-            <li class="services__card fade-up">
-              <div class="services__card-img"><img src="./img/web.png" alt=""></div>
-              <h3 class="services__card-title">Web Development</h3>
-              <p class="services__card-description">We will take care of the creation and/or restyling of your website. We design only responsive platforms, innovative layouts and quality content for an impeccable online presence.</p>
-              <a href="#" class="services__card-btn"><span>Discover.</span></a>
-            </li>
-            <li class="services__card fade-up">
-              <div class="services__card-img"><img src="./img/designlogo.png" alt=""></div>
-              <h3 class="services__card-title">Web Design</h3>
-              <p class="services__card-description">We will create all your graphic content, for online and offline activities. Our technical expertise and great market-oriented creativity will bring your business to effective results.</p>
-              <a href="#" class="services__card-btn"><span>Discover.</span></a>
-            </li>
-            <li class="services__card fade-up">
-              <div class="services__card-img"><img src="./img/social.png" alt=""></div>
-              <h3 class="services__card-title">Social Media</h3>
-              <p class="services__card-description">We will manage, on a 360° level, all of your social platforms. Our work aims to reach a strong engagement and a constantly increasing organic traffic. Lower cost, higher results.</p>
-              <a href="#" class="services__card-btn"><span>Discover.</span></a>
-            </li>
-            <li class="services__card fade-up">
-              <div class="services__card-img"><img src="./img/branding.png" alt=""></div>
-              <h3 class="services__card-title">Rebranding</h3>
-              <p class="services__card-description">We will fully develop your digital strategy which, combined with a strong online and offline presence, will contribute to the affirmation and credibility of your brand. Be visible, be trustable.</p>
-              <a href="#" class="services__card-btn"><span>Discover.</span></a>
-            </li>
-          </ul>
+        <ul class="services__cards">
+          <li class="services__card fade-up">
+            <div class="services__card-img"><img src="./img/web.png" alt=""></div>
+            <h3 class="services__card-title">Web Development</h3>
+            <p class="services__card-description">We will take care of the creation and/or restyling of your website. We
+              design only responsive platforms, innovative layouts and quality content for an impeccable online
+              presence.</p>
+            <a href="#" class="services__card-btn" aria-labelledby="discove-web"><span
+                id="discover-web">Discover.</span></a>
+          </li>
+          <li class="services__card fade-up">
+            <div class="services__card-img"><img src="./img/designlogo.png" alt=""></div>
+            <h3 class="services__card-title">Web Design</h3>
+            <p class="services__card-description">We will create all your graphic content, for online and offline
+              activities. Our technical expertise and great market-oriented creativity will bring your business to
+              effective results.</p>
+            <a href="#" class="services__card-btn" aria-labelledby="discover-design"><span
+                id="discover-design">Discover.</span></a>
+          </li>
+          <li class="services__card fade-up">
+            <div class="services__card-img"><img src="./img/social.png" alt=""></div>
+            <h3 class="services__card-title">Social Media</h3>
+            <p class="services__card-description">We will manage, on a 360° level, all of your social platforms. Our
+              work aims to reach a strong engagement and a constantly increasing organic traffic. Lower cost, higher
+              results.</p>
+            <a href="#" class="services__card-btn" aria-labelledby="discover-social"><span
+                id="discover-social">Discover.</span></a>
+          </li>
+          <li class="services__card fade-up">
+            <div class="services__card-img"><img src="./img/branding.png" alt=""></div>
+            <h3 class="services__card-title">Rebranding</h3>
+            <p class="services__card-description">We will fully develop your digital strategy which, combined with a
+              strong online and offline presence, will contribute to the affirmation and credibility of your brand. Be
+              visible, be trustable.</p>
+            <a href="#" class="services__card-btn" aria-labelledby="discover-branding"><span
+                id="discover-branding">Discover.</span></a>
+          </li>
+        </ul>
       </div>
-      <a href="#" class="about__btn fade-in-left"><span>Learn more.</span></a>
+      <a href="#" class="about__btn fade-in-left" aria-labelledby="learn-more"><span id="learn-more">Learn
+          more.</span></a>
     </section>
+    <!--CLIENTS-->
     <section class="clients">
-      <div class="s-container">      
-      <p class="section__top fade-in-left">
-        Our clients
-      </p>
-      <ul class="clients__wrapper">
-        <li class="clients__item fade-up">
-          <img src="./img/BT.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/Global-Editors-Network.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/Logo-CNBC.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/ted.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/ih.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/Livestream.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/Oracle.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/wu.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/swiss.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/ICRC.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/EPFL.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/BCP.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/CLARINS.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/UN.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/UNECE.png" alt="" class="clients__item-picture">
-        </li>
-        <li class="clients__item fade-up">
-          <img src="./img/Mindmaze.png" alt="" class="clients__item-picture">
-        </li>
-      </ul>
+      <div class="s-container">
+        <p class="section__top fade-in-left">
+          Our clients
+        </p>
+        <ul class="clients__wrapper">
+          <li class="clients__item fade-up">
+            <img src="./img/BT.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/Global-Editors-Network.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/Logo-CNBC.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/ted.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/ih.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/Livestream.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/Oracle.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/wu.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/swiss.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/ICRC.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/EPFL.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/BCP.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/CLARINS.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/UN.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/UNECE.png" alt="" class="clients__item-picture">
+          </li>
+          <li class="clients__item fade-up">
+            <img src="./img/Mindmaze.png" alt="" class="clients__item-picture">
+          </li>
+        </ul>
     </section>
-      <!--PORTFOLIO-->
-    <section class="portfolio s-container">
-    </section>
-    <div class="fixed-btn">
+    <!--FIXED MESSAGE BUTTON-->
+    <button class="fixed-btn" aria-labelledby="message-btn">
+      <span id="message-btn" hidden>Send us a message!</span>
       <i class="fa-solid fa-comment-dots"></i>
-    </div>
+    </button>
   </main>
   <!--FOOTER-->
   <footer class="footer s-container">
-
     <div class="footer__top">
       <div class="footer__top-left">
         <h2 class="footer__top-title">Got a project?</h2>
         <p class="footer__top-subtitle">Let's talk</p>
         <div class="footer__top-cta">
           <i class="fa-solid fa-angle-right"></i>
-          <a href="#">Tell us everything</a>
+          <a class="link--third" href="#">Tell us everything</a>
         </div>
       </div>
       <div class="footer__top-right">
         <ul class="footer__nav">
-          <li><a href="#">Works</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Solutions</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a class="link--second" href="#">Works</a></li>
+          <li><a class="link--second" href="#">About</a></li>
+          <li><a class="link--second" href="#">Solutions</a></li>
+          <li><a class="link--second" href="#">Contact</a></li>
         </ul>
         <ul class="footer__nav">
-          <li><a href="#">Lugano</a></li>
-          <li><a href="#">Berlin</a></li>
-          <li><a href="#">Oslo</a></li>
+          <li><a class="link--second" href="#">Lugano</a></li>
+          <li><a class="link--second" href="#">Berlin</a></li>
+          <li><a class="link--second" href="#">Oslo</a></li>
         </ul>
         <ul class="footer__nav">
-          <li><a href="#">Creative.news</a></li>
-          <li><a href="#">Creative.blog</a></li>
-          <li><a href="#">Creative.events</a></li>
-          <li><a href="#">Creative.store</a></li>
+          <li><a class="link--second" href="#">Creative.news</a></li>
+          <li><a class="link--second" href="#">Creative.blog</a></li>
+          <li><a class="link--second" href="#">Creative.events</a></li>
+          <li><a class="link--second" href="#">Creative.store</a></li>
           <li></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
       <a href="#" class="logo">
-        <img src="./img/desktop/logo.svg" alt="website logo linking to our home page" width="161" height="30" class="logo__img"></img>
+        <img src="./img/desktop/logo.svg" alt="website logo linking to our home page" width="161" height="30"
+          class="logo__img"></img>
       </a>
       <ul class="socials">
         <li class="socials__icon">
@@ -261,51 +277,6 @@
       </ul>
     </div>
   </footer>
-
-  <!--FOOTER END-->
-
-
-
-
-  
-
-  
-
-  <!--Design is strategic.
-
-  A well-crafted design strategy consistently produces desired outcomes and brand awareness. 
-  We are firm believers that success lies in creative collaboration with our clients.
-
-  Schedule a call
-
-  Our approach for creating a winning brand
-
-  01 Brand strategy
-  Brand strategy is critical for long-term success. Outshining competitors and capturing 
-  the target audience are key.
-
-  02 Brand design
-  Keeping the brand design unique and meaningful helps in communicating the brand’s timeless 
-  value effectively.
-
-  03 Web design
-  A beautifully crafted website is the best tool for brand awareness, and ultimately results 
-  in increased revenues.
-
-  Brand naming & guidelines
-  Lean Product Roadmap 
-  2019 project
-
-  Brand identity & merchandise
-  New Majestic Hotel 
-  2018 Project
-  
-  Brand identity & web design
-  Crypto Dashboard
-  2016 Project
-
-  Let's build something great together.
-
-  Schedule a Call-->
 </body>
+
 </html>

@@ -1,67 +1,63 @@
 @use "../abstracts" as *;
 
 .about {
-    min-height: 100vh;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  @media screen and (max-height: 30em) and (max-width: 62em) {
+    gap: 3rem;
+    min-height: initial;
+    padding: 2rem 0;
+  }
+  &__title {
+    font-family: $ff-primary;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: center;
     @media screen and (max-height: 30em) and (max-width: 62em) {
-        min-height: initial;
-        gap: 3rem;
-        padding: 2rem 0;
+      font-size: clamp(1.5rem, 5vw, 2rem);
     }
-    &__title {
-        color: rgb(26, 26, 26);
-        font-weight: 500;
-        font-family: $ff-secondary;
-        line-height: 1.2;
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-        text-align: center;
-        @media screen and (max-height: 30em) and (max-width: 62em) {
-            font-size: clamp(1.5rem, 5vw, 2rem);
-        }
+  }
+  &__img-wrapper {
+    justify-self: center;
+    max-width: 60rem;
+    overflow: hidden;
+    border-radius: 0.4rem;
+  }
+  &__img {
+    transition: transform 0.7s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  &__img:hover {
+    transform: scale(1.025);
+  }
+  &__btn {
+    align-self: baseline;
+    justify-self: center;
+    position: relative;
+    width: fit-content;
+    margin: 3rem 0 2rem;
+    letter-spacing: 0.1rem;
+
+    @media screen and (max-height: 30em) and (max-width: 62em) {
+      margin: 0;
     }
-    &__img-wrapper {
-        max-width: 60rem;
-        overflow: hidden;
-        border-radius: 0.4rem;
-        justify-self: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -5%;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: $color-red;
+      transition: transform 0.9s cubic-bezier(0.3, 1, 0.8, 1);
     }
-    &__img {
-        transition: transform 0.7s cubic-bezier(0.3, 1, 0.8, 1);
+    &:hover::before {
+      transform: scale(1.2);
     }
-    &__img:hover {
-        transform: scale(1.025);
+    span {
+      position: relative;
     }
-    &__btn {
-        font-weight: 400;
-        align-self: baseline;
-        justify-self: center;
-        letter-spacing: 0.1rem;
-        position: relative;
-        margin-top: 3rem;
-        width: fit-content;
-        padding: 0.7rem 1.5rem;
-        @media screen and (max-height: 30em) and (max-width: 62em) {
-            margin: 0;
-        }
-        &::before {
-            position: absolute;
-            top: 0;
-            left: 10%;
-            height: 50px;
-            width: 50px;
-            content: '';
-            background: $color-red;
-            border-radius: 50%;
-            transition: transform 0.9s cubic-bezier(0.3, 1, 0.8, 1);
-        }
-        &:hover::before {
-            transform: scale(1.2)
-        }
-        span {
-            position: relative;
-            mix-blend-mode: hard-light;
-        }
-    }
+  }
 }

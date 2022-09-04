@@ -1,99 +1,100 @@
 @use "../abstracts" as *;
 
-
 .hero {
-    display: grid;
-    grid-template-rows: 6fr 1fr;
-    align-items: center;
-    background: #000000;
-    background-image:  url(/src/img/girl640w.webp); /* fallback */
-    background: linear-gradient(250deg,rgba(0,0,0,.1),rgba(0,0,0,.8)), url(/src/img/girlmobile.webp);
-    background-position-x: 40%;
-    background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 6fr 1fr;
+  align-items: center;
+  background: #000000;
+  background: linear-gradient(250deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url(/src/img/girlmobile.webp);
+  background-position-x: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (max-height: 30em) and (max-width: 62em) {
+    grid-template-rows: 4fr 1fr;
+  }
+
+  @include breakpoint(large) {
+    background: linear-gradient(250deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+      url(/src/img/girldesktop.webp);
     background-size: cover;
-    @include breakpoint(large) {
-        background-image:  url(/src/img/girl.webp); /* fallback */
-        background: linear-gradient(250deg,rgba(0,0,0,.1),rgba(0,0,0,.8)), url(/src/img/girldesktop.webp);
-        background-size: cover;
-        background-position-y: 20%;
-        background-repeat: no-repeat;
-      }
-      @media screen and (max-height: 30em) and (max-width: 62em) {
-        grid-template-rows: 4fr 1fr;
-      }
-    &__content {
-        display: flex;
-        flex-direction: column;
-        color: white;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+
+  &__title {
+    padding-right: 3rem;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.1;
+  }
+
+  &__text {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgb(221, 221, 221);
+  }
+
+  &__btn {
+    position: relative;
+    width: fit-content;
+    padding: 0.7rem 1.5rem;
+    margin-top: 3rem;
+    border: solid 1px $color-red;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.1rem;
+    color: white;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background: $color-red;
+      transform: translate3d(-90%, 0, 0);
+      transition: transform 1s cubic-bezier(0.3, 1, 0.8, 1);
     }
-    &__img-container {
-        width: fit-content;
-        margin: 0 auto;
+
+    &:hover::before {
+      transform: translate3d(90%, 0, 0);
     }
-    &__btn {
-        letter-spacing: 0.1rem;
-        border: solid 1px $color-red;
-        overflow: hidden;
-        position: relative;
-        margin-top: 3rem;
-        width: fit-content;
-        color: white;
-        padding: 0.7rem 1.5rem;
-        background: rgba(0,0,0,.1);
-        &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            content: '';
-            background: $color-red;
-            transform: translate3d(-90%,0,0);
-            transition: transform 1s cubic-bezier(0.3, 1, 0.8, 1);
-        }
-        &:hover::before {
-            transform: translate3d(90%,0,0);
-        }
-        &:hover {
-            border: solid 1px $color-red;
-        }
-        span {
-            position: relative;
-            mix-blend-mode: hard-light;
-        }
+
+    &:hover {
+      border: solid 1px $color-red;
     }
-    &__title {
-        font-size: clamp(2.5rem, 5vw, 5rem);
-        font-weight: 500;
-        line-height: 1.1;
-        padding-right: 3rem;
-    }
-    &__text {
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        color: rgb(221, 221, 221);
-    }
-    button {
-        cursor: pointer;
-        background: none;
-        border: none;
-        width: fit-content;
-        height: fit-content;
-        color: white;
-        justify-self: center;
-        align-self: flex-start;
-        font-size: 2rem;
-        animation: scroll 3s cubic-bezier(0.3, 1, 0.8, 1) infinite;
-    }
+  }
+
+  .scroll-btn {
+    align-self: flex-start;
+    justify-self: center;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    animation: scroll 3s cubic-bezier(0.3, 1, 0.8, 1) infinite;
+
     @keyframes scroll {
-        0% {
-            transform: translateY(0);
-        }
-      
-        50% {
-            transform: translateY(20%);
-        }
-        100% {
-            transform: translateY(0);
-        }
+      0% {
+        transform: translateY(0);
       }
+
+      50% {
+        transform: translateY(40%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
 }

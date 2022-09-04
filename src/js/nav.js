@@ -15,11 +15,13 @@ hamburger.addEventListener('click', () => {
     setHamburgerMenuState();
     addAriaHiddenAttr(mql);
     setTimeout(() => {
-      handleIntersect();
+      addRevealToNavItems();
     }, 1000);
   }, 400);
 });
 
+
+// Function to set Hamburger Menu state, expanded or not.
 
 function setHamburgerMenuState() {
   if (navMenu.classList.contains('active')) {
@@ -30,7 +32,7 @@ function setHamburgerMenuState() {
 }
 
 
-// I prefer this over visibility hidden
+// Function to add/remove ariaHidden atribute on nav links depending on device view.
 
 function addAriaHiddenAttr(event) {
   const links = document.querySelectorAll('.nav__itemlink');
@@ -52,8 +54,9 @@ function addAriaHiddenAttr(event) {
 mql.addListener(addAriaHiddenAttr);
 addAriaHiddenAttr(mql);
 
+// Function to add Reveal class on nav links when mobile menu is active.
 
-  function handleIntersect() {
+  function addRevealToNavItems() {
     const navMenu = document.querySelector('.nav__menu');
     const navItems = document.querySelectorAll('.nav__item');
     navItems.forEach((item, index) => {
@@ -69,6 +72,8 @@ addAriaHiddenAttr(mql);
       }
     });
   }
+
+  // Function to remove Fade-in-left class from nav links on desktop view.
 
   function removeNavItemClass(event) {
     const navItems = document.querySelectorAll('.nav__item');

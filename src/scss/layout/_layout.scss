@@ -24,18 +24,18 @@
 }
 
 .section__top {
+  position: relative;
   font-weight: 200;
   font-size: clamp(1rem, 5vw, 1.4rem);
-  position: relative;
   &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -2.25rem;
-      width: 1.5rem;
-      height: 0.0625rem;
-      background: black;
-      transform: translateY(-50%);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2.25rem;
+    width: 1.5rem;
+    height: 0.0625rem;
+    background: black;
+    transform: translateY(-50%);
   }
 }
 
@@ -43,16 +43,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $color-red;
-  height: 3.5rem;
-  width: 3.5rem;
-  border-radius: 50%;
-  cursor: pointer;
   position: fixed;
   bottom: 5%;
   right: 5%;
+  height: 3.5rem;
+  width: 3.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: $color-red;
   font-size: 2.3rem;
   color: white;
+  z-index: 100;
   i {
     transition: transform 0.5s ease-in-out;
   }
@@ -60,4 +62,3 @@
     transform: scale(1.1);
   }
 }
-

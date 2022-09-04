@@ -8,7 +8,68 @@ a {
   transition: color $transition-primary;
 
   &:focus-visible {
-    outline-offset: .4625rem;
+    outline-offset: 0.4625rem;
     outline: 0.25rem dotted $color-black;
+  }
+}
+
+.hero a:focus-visible,
+.projects a:focus-visible,
+.scroll-btn:focus-visible  {
+  outline: 0.25rem dotted $color-white;
+}
+
+.link--first,
+.link--second,
+.link--third {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    width: calc(100% - 8px);
+    z-index: -1;
+    background: rgba($color-red, 0.25);
+    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+  }
+
+  &:hover:after {
+    left: 0;
+    bottom: -2px;
+  }
+}
+
+.link--first {
+  &::after {
+    bottom: -3px;
+    height: 55%;
+  }
+
+  &:hover:after {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+.link--second {
+  &::after {
+    bottom: -6px;
+    height: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    height: calc(100% - 8px);
+  }
+}
+
+.link--third {
+  position: relative;
+  &::after {
+    bottom: -6px;
+    height: calc(100% - 8px);
+  }
+  &:hover:after {
+    width: 100%;
+    height: 100%;
   }
 }
