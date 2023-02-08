@@ -1,7 +1,3 @@
-<p text align="center">
-    <img src="/src/img/logo-mh-dev.svg">
-<p>
-
 # Creative Agency Landing Page
 
 ### 👋 Hello there 
